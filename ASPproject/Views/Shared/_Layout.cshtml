@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="~/css/StyleSheet.css"  rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#"><ya-tr-span data-index="0-0" data-value="Carousel" data-translation="Карусель" data-type="trSpan">Авто</ya-tr-span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Переключение навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><ya-tr-span data-index="1-0" data-value="Home " data-translation="Главная " data-type="trSpan">Главная </ya-tr-span><span class="sr-only"><ya-tr-span data-index="1-0" data-value="(current)" data-translation="(текущая)" data-type="trSpan">(текущая)</ya-tr-span></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><ya-tr-span data-index="2-0" data-value="Link" data-translation="Ссылка" data-type="trSpan">Ссылка</ya-tr-span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><ya-tr-span data-index="3-0" data-value="Disabled" data-translation="Нетрудоспособный" data-type="trSpan">Нетрудоспособный</ya-tr-span></a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Поиск" aria-label="Поиск">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><ya-tr-span data-index="4-0" data-value="Search" data-translation="Поиск" data-type="trSpan">Поиск</ya-tr-span></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-6">
+        @RenderBody()
+    </div>
+    <footer class="container">
+        <p class="float-right"><a href="#">Наверх</a></p>
+        <p>© 2020 Company, Inc. * <a href="#">Конфиденциальность </a>* <a href="#">Условия</a></p>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
