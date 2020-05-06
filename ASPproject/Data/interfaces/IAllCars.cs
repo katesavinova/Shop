@@ -9,7 +9,7 @@ namespace ASPproject.Data.Models.interfaces
     public interface IAllCars
     {
         IEnumerable<Car> Cars { get; }
-        IEnumerable<Car> GetFavCars { set; get; }//IEnumerable=перечисление
+        IEnumerable<Car> GetFavCars {get; }//IEnumerable=перечисление
 
         Car getObjectCar(int CarId);
     }
