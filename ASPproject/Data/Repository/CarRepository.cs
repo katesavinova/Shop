@@ -17,11 +17,11 @@ namespace ASPproject.Data.Repository
         {
             this.appDBContent = appDBContent;
         }
-        IEnumerable<Car> IAllCars.Cars => appDBContent.Car.Include(c => c.Category);
+        public IEnumerable<Car> Cars => appDBContent.Car.Include(c => c.Category);
 
-        IEnumerable<Car> IAllCars.GetFavCars => appDBContent.Car.Where(p=>p.isFavourite).Include(c => c.Category);
+        public IEnumerable<Car>GetFavCars => appDBContent.Car.Where(p=>p.isFavourite).Include(c => c.Category);
 
-        Car IAllCars.getObjectCar(int CarId) => appDBContent.Car.FirstOrDefault(p => p.id == CarId);
+        public Car getObjectCar(int CarId) => appDBContent.Car.FirstOrDefault(p => p.id == CarId);
 
 
     }

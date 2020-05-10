@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ASPproject.Data;
 using ASPproject.Data.Mocks;
+using ASPproject.Data.Models;
 using ASPproject.Data.Models.interfaces;
 using ASPproject.Data.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -31,9 +32,16 @@ namespace ASPproject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection"))); 
-            services.AddMvc();
-            services.AddTransient<IAllCars,CarRepository>();
             services.AddTransient<ICarsCategory,CategoryRepository>();
+            services.AddTransient<IAllCars,CarRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShopCart.GetCart(sp));
+
+             services.AddMvc();
+
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +50,7 @@ namespace ASPproject
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             using (var scope = app.ApplicationServices.CreateScope())

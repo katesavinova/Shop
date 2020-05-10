@@ -15,6 +15,7 @@ namespace ASPproject.Data
         }
         public DbSet<Car>Car{set; get;}
         public DbSet<Category>Category{set; get;}
+        public DbSet<ShopCaritem>ShopCaritems{set; get;}
 
     }
 }
