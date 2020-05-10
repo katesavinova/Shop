@@ -50,7 +50,20 @@ namespace ASPproject.Data.Mocks
                         isFavourite=true,
                         available=true,
                         Category=_categoryCars.AllCategories.Last()
-                    }
+                    }/*,
+                     new Car
+                     {
+                        name="бмв, BMW, седан, 7-Series",
+                        shortDesc="Немецкий производитель автомобилей, мотоциклов, двигателей, а также велосипедов.",
+                        longDesc="BMW 7, или седьмая серия BMW, — автомобили серии представительского класса. Начиная " +
+                        "с 1977 года было выпущено шесть поколений этой серии. В 2015 году в Женевском автосалоне компания BMW представила новую BMW 7 в кузове G11. " +
+                        "Основными конкурентами BMW 7 являются автомобили Mercedes-Benz S-класс, Audi A8, Lexus LS и Jaguar XJ",
+                        img="/img/bmw.jpg",
+                        price=16290,
+                        isFavourite=true,
+                        available=true,
+                        Category=_categoryCars.AllCategories.Last()
+                     }*/
                 };
             }
         }
